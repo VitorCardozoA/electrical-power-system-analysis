@@ -39,6 +39,36 @@ python short_circuit_analysis.py
 python transient_stability_case_study.py
 ```
 
+## Exemplo De Saída
+
+Trecho de execução do `short_circuit_analysis.py`:
+
+```text
+FALTA Bifasico-terra (b-c-T) em FALTA  (Zf=0)
+  Zeq1 = j0.861 pu
+  Zeq2 = j0.861 pu
+  Zeq0 = j1.343 pu
+
+  Correntes de fase:
+    Ia = 0.000 + 0.000j pu -> |Ia|=0.000 pu = 0.000 A, ang=90.00 deg
+    Ib = -1.006 + 0.423j pu -> |Ib|=1.091 pu = 456.431 A, ang=157.20 deg
+    Ic = 1.006 + 0.423j pu -> |Ic|=1.091 pu = 456.431 A, ang=22.80 deg
+```
+
+Trecho de execução do `transient_stability_case_study.py`:
+
+```text
+ANALISE DE ESTABILIDADE - CRITERIO DAS AREAS IGUAIS
+
+Pm       = 0.8265 pu  (343 MW)
+Pmax_pos = 0.7795 pu  (323.5 MW)
+
+>>> Pm (0.8265) > Pmax_pos (0.7795) <<<
+
+*** SISTEMA INSTAVEL ***
+Conclusao: O gerador perdera o sincronismo com a barra infinita.
+```
+
 ## Como Usar `short_circuit_analysis.py`
 
 A principal seção editável pelo usuário é o bloco `DADOS DO SISTEMA`.
